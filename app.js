@@ -3,7 +3,7 @@
 // ==========================================
 // 如果您将后端部署在公网 IP，请在此修改地址。
 // 例如: const API_BASE_URL = "http://您的云服务器IP:5000";
-const API_BASE_URL = "http://localhost:5000";
+const API_BASE_URL = "http://localhost:5678";
 
 document.addEventListener("DOMContentLoaded", () => {
     // 状态元素

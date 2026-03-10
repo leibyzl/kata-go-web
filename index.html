@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>KataGo Web AI</title>
+    <!-- 引入深色主题样式 (使用相对路径以适应静态部署) -->
+    <link rel="stylesheet" href="style.css">
+    <!-- 引入 WGo.js 用于围棋盘渲染 -->
+    <script type="text/javascript" src="https://wgo.waltheri.net/wgo/wgo.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>KataGo Web AI</h1>
+            <div class="status-bar" id="status">正在连接 AI...</div>
+        </header>
+
+        <main>
+            <div class="board-container">
+                <div id="board"></div>
+            </div>
+
+            <aside class="controls">
+                <div class="control-group">
+                    <h3>游戏控制</h3>
+                    <button id="btn-reset" class="btn btn-danger">重新开始</button>
+                    <button id="btn-undo" class="btn">悔棋</button>
+                </div>
+
+                <div class="control-group">
+                    <h3>AI 控制</h3>
+                    <button id="btn-genmove-b" class="btn btn-primary">AI 执黑</button>
+                    <button id="btn-genmove-w" class="btn btn-primary">AI 执白</button>
+                </div>
+
+                <div class="control-group">
+                    <h3>对局信息</h3>
+                    <div class="info-panel">
+                        <p>当前回合: <span id="current-turn">黑棋</span></p>
+                        <p>最新落子: <span id="last-move">-</span></p>
+                    </div>
+                </div>
+            </aside>
+        </main>
+    </div>
+
+    <!-- 业务逻辑 (使用相对路径) -->
+    <script src="app.js"></script>
+</body>
+
+</html>
